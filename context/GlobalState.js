@@ -1,17 +1,18 @@
-'use client'
+"use client";
 
-import { createContext, useReducer, useContext } from 'react';
+import { createContext, useReducer, useContext } from "react";
 // Define the initial state
 const initialState = {
   user: null,
 };
+
 // Create a context object
 const GlobalStateContext = createContext();
 function reducer(state, action) {
   switch (action.type) {
-    case 'SET_USER':
+    case "SET_USER":
       return { ...state, user: action.payload };
-    case 'LOGOUT_USER':
+    case "LOGOUT_USER":
       return { ...state, user: null };
     default:
       return state;
