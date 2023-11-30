@@ -1,19 +1,17 @@
 "use client";
 
-{
-  /*MAIN PAGE*/
-}
-
 import { useEffect, useState } from "react";
 import { useGlobalState } from "../context/GlobalState";
 import authService from "../services/auth.service";
 import { jwtDecode } from "jwt-decode";
 import Link from "next/link";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const { state, dispatch } = useGlobalState();
   const [words, setWords] = useState("");
+  const router = useRouter();
 
   useEffect(() => {
     axios
@@ -23,7 +21,7 @@ export default function Home() {
       .then((response) => {
         console.log(response.data);
         setWords(response.data);
-        // dispatch(response.data);
+
         console.log(state);
       })
       .catch((error) => {
@@ -54,8 +52,18 @@ export default function Home() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // TODO: Add your logic here for what should happen when you type something in the input and hit enter
-    console.log(`Form submitted with value: ${inputValue}`);
+    console.log(inputValue);
+    axios
+      .post("http://127.0.0.1:8000/api/v1/openai/stream", {
+        human_input_str: "inputValue",
+      })
+      .then((response) => {
+        console.log(response.data);
+        setWords(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const handleChange = (event) => {
