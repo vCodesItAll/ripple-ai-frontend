@@ -1,5 +1,9 @@
 "use client";
 
+{
+  /*MAIN PAGE*/
+}
+
 import { useEffect, useState } from "react";
 import { useGlobalState } from "../context/GlobalState";
 import authService from "../services/auth.service";
@@ -46,31 +50,47 @@ export default function Home() {
     router.push("/");
   };
 
+  const [inputValue, setInputValue] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // TODO: Add your logic here for what should happen when you type something in the input and hit enter
+    console.log(`Form submitted with value: ${inputValue}`);
+  };
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
   return (
-    <div className="flex flex-col text-red-500 min-h-screen">
-      <div className="text-4xl text-yellow-300 italic">
+    <div className="flex flex-col min-h-screen max-w-7xl mx-auto py-5">
+      <div className="flex justify-between text-4xl text-yellow-300 italic">
         WELCOME TO RIPPLE AI
+        {state.user ? (
+          <div className="nav-item">
+            <Link href="/" className="" onClick={handleLogout}>
+              Logout
+            </Link>
+          </div>
+        ) : (
+          <div className="nav-item">
+            <Link href="/login">Login</Link>
+          </div>
+        )}
       </div>
 
+      {/* AI OUTPUT */}
       <div className="flex flex-col flex-grow items-center justify-center">
         <p className="text-green-300 py-5">{words}</p>
-        <input
-          className="bg-black border-none"
-          placeholder="Type here..."
-        ></input>
+        <form onSubmit={handleSubmit}>
+          <input
+            className="bg-black border-none outline-none text-center"
+            placeholder="Type here..."
+            value={inputValue}
+            onChange={handleChange}
+          />
+        </form>
       </div>
-
-      {state.user ? (
-        <li className="nav-item">
-          <Link href="/" className="" onClick={handleLogout}>
-            Logout
-          </Link>
-        </li>
-      ) : (
-        <li className="nav-item">
-          <Link href="/login">Login</Link>
-        </li>
-      )}
     </div>
   );
 }
