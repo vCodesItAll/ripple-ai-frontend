@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { GlobalStateProvider } from "@/context/GlobalState";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
-
 
 export const metadata = {
   title: "Ripple.ai",
@@ -14,7 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <GlobalStateProvider>{children}</GlobalStateProvider>
+        <GlobalStateProvider>
+          <Toaster />
+          {children}
+        </GlobalStateProvider>
       </body>
     </html>
   );

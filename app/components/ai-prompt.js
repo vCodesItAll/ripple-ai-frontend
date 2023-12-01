@@ -5,11 +5,11 @@ import { useGlobalState } from "../../context/GlobalState";
 import { useRouter } from "next/navigation";
 import authService from "../../services/auth.service";
 import { jwtDecode } from "jwt-decode";
+import toast from "react-hot-toast";
 
 function AIPrompt() {
   const [words, setWords] = useState("");
   const [inputValue, setInputValue] = useState("");
-
   const { state, dispatch } = useGlobalState();
   const router = useRouter();
 
@@ -33,6 +33,7 @@ function AIPrompt() {
     dispatch({ type: "LOGOUT_USER" });
     router.push("/");
   };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(inputValue);
@@ -48,6 +49,8 @@ function AIPrompt() {
         }
       )
       .then((response) => {
+        // TODO: ask bob to make this only show up while loading and then go away when the prompt has arrived
+        toast.loading("RippleAI is thinking...");
         console.log(response.data);
         setWords(response.data);
       })
