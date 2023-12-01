@@ -41,7 +41,7 @@ export default function Home() {
     console.log(inputValue);
     const data = await axios
       .post(
-        "http://127.0.0.1:8000/api/v1/openai/stream?human_input_str=" +
+        "https://8000-tresphill-rippleai2-gwyip31yybf.ws-us106.gitpod.io/api/v1/openai_endpoints/stream?human_input_str=" +
           inputValue,
         {
           human_input_str: inputValue,
@@ -82,7 +82,7 @@ export default function Home() {
 
       {/* AI OUTPUT */}
       <div className="flex flex-col flex-grow items-center justify-center">
-        <p className="text-green-300 py-5">{words}</p>
+        <p className="text-green-400 py-5">{words}</p>
         <form onSubmit={handleSubmit}>
           <input
             className="bg-black border-none outline-none text-center"

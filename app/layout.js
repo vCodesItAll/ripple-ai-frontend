@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { GlobalStateProvider } from "@/context/GlobalState";
-import axios from "axios";
 
 const inter = Inter({ subsets: ["latin"] });
 
