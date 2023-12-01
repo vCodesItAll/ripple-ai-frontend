@@ -14,20 +14,6 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    axios
-      .post(
-        "http://127.0.0.1:8000/api/v1/openai/stream?human_input_str=start%20the%20adventure"
-      )
-      .then((response) => {
-        console.log(response.data);
-        setWords(response.data);
-
-        console.log(state);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-
     const getUserFromLocalStorage = () => {
       const userData = localStorage.getItem("user");
       if (userData) {
@@ -50,13 +36,20 @@ export default function Home() {
 
   const [inputValue, setInputValue] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(inputValue);
-    axios
-      .post("http://127.0.0.1:8000/api/v1/openai/stream", {
-        human_input_str: "inputValue",
-      })
+    const data = await axios
+      .post(
+        "http://127.0.0.1:8000/api/v1/openai/stream?human_input_str=" +
+          inputValue,
+        {
+          human_input_str: inputValue,
+        },
+        {
+          "Content-Type": "application/x-www-form-urlencoded",
+        }
+      )
       .then((response) => {
         console.log(response.data);
         setWords(response.data);
