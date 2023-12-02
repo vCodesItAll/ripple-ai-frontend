@@ -18,14 +18,17 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="space-x-8">
+          <NavLink to="#" className="text-white hover:text-gray-300">
+            Stories
+          </NavLink>
           <NavLink to="/submissions" className="text-white hover:text-gray-300">
             Submissions
           </NavLink>
-          <NavLink to="/coming-soon" className="text-white hover:text-gray-300">
-            Coming Soon
-          </NavLink>
           <NavLink to="/contact" className="text-white hover:text-gray-300">
             Contact
+          </NavLink>
+          <NavLink to="#" className="text-white hover:text-gray-300">
+            Login
           </NavLink>
         </div>
       </div>
