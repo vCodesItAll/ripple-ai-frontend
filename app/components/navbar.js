@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <NavLink to="/dashboard" className="text-white text-5xl font-bold">
-          RIPPLE.ai
+          RiPPLE.<span style={{ color: "orange" }}>ai</span>
         </NavLink>
 
         {/* Navigation Links */}
