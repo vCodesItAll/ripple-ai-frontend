@@ -14,10 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <GlobalStateProvider>
-          <Toaster />
-          {children}
-        </GlobalStateProvider>
+        <GlobalStateProvider>{children}</GlobalStateProvider>
       </body>
     </html>
   );

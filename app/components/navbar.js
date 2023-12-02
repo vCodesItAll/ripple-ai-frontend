@@ -1,28 +1,32 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
+    // need to make mobile friendly
+    // when navbar shrinks:
+    //  ripple logo needs to shrink slightly and take up top half
+    //  links need to shrink more and go under logo with space between links
+    // everything needs to center align
+
     <nav className="bg-zinc-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="text-white text-5xl font-bold">
+        <NavLink to="/dashboard" className="text-white text-5xl font-bold">
           RIPPLE.ai
-        </a>
+        </NavLink>
 
         {/* Navigation Links */}
-        <div className="space-x-4">
-          <a href="#" className="text-white hover:text-gray-300">
-            Stories
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
+        <div className="space-x-8">
+          <NavLink to="/submissions" className="text-white hover:text-gray-300">
             Submissions
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
-            Updates
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
+          </NavLink>
+          <NavLink to="/coming-soon" className="text-white hover:text-gray-300">
+            Coming Soon
+          </NavLink>
+          <NavLink to="/contact" className="text-white hover:text-gray-300">
             Contact
-          </a>
+          </NavLink>
         </div>
       </div>
     </nav>

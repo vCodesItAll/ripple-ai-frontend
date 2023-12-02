@@ -5,7 +5,7 @@ import { useGlobalState } from "../../context/GlobalState";
 import { useRouter } from "next/navigation";
 import authService from "../../services/auth.service";
 import { jwtDecode } from "jwt-decode";
-import toast from "react-hot-toast";
+import Navbar from "./navbar";
 
 function AIPrompt() {
   const [words, setWords] = useState("");
@@ -49,8 +49,6 @@ function AIPrompt() {
         }
       )
       .then((response) => {
-        // TODO: ask bob to make this only show up while loading and then go away when the prompt has arrived
-        toast.loading("RippleAI is thinking...");
         console.log(response.data);
         setWords(response.data);
       })
@@ -67,17 +65,20 @@ function AIPrompt() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen max-w-7xl mx-auto text-xl flex-grow items-center justify-center">
-      <p className="text-white-400 py-5">{words}</p>
-      <form onSubmit={handleSubmit}>
-        <input
-          className="bg-black border-none outline-none text-center"
-          placeholder="Type here..."
-          value={inputValue}
-          onChange={handleChange}
-        />
-      </form>
-    </div>
+    <>
+      <Navbar />
+      <div className="flex flex-col min-h-screen max-w-7xl mx-auto text-xl flex-grow items-center justify-center">
+        <p className="text-white-400 py-5">{words}</p>
+        <form onSubmit={handleSubmit}>
+          <input
+            className="bg-black border-none outline-none text-center"
+            placeholder="Type here..."
+            value={inputValue}
+            onChange={handleChange}
+          />
+        </form>
+      </div>
+    </>
   );
 }
 
