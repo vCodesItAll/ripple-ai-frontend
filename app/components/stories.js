@@ -1,13 +1,14 @@
 import React from "react";
 import Navbar from "./navbar";
+import AIPrompt from "./ai-prompt";
 
-function ComingSoon() {
+function Stories() {
   return (
     <>
       <Navbar />
-      <div>testing</div>
+      <AIPrompt />
     </>
   );
 }
 
-export default ComingSoon;
+export default Stories;

@@ -5,7 +5,7 @@ function Submissions() {
   return (
     <>
       <Navbar />
-      <div>testing</div>
+      <div>test test test</div>
     </>
   );
 }

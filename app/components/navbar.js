@@ -18,7 +18,7 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="space-x-8">
-          <NavLink to="#" className="text-white hover:text-gray-300">
+          <NavLink to="/stories" className="text-white hover:text-gray-300">
             Stories
           </NavLink>
           <NavLink to="/submissions" className="text-white hover:text-gray-300">
@@ -27,7 +27,7 @@ const Navbar = () => {
           <NavLink to="/contact" className="text-white hover:text-gray-300">
             Contact
           </NavLink>
-          <NavLink to="#" className="text-white hover:text-gray-300">
+          <NavLink to="/login" className="text-white hover:text-gray-300">
             Login
           </NavLink>
         </div>

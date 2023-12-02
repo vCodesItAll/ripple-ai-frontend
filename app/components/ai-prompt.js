@@ -7,6 +7,8 @@ import authService from "../../services/auth.service";
 import { jwtDecode } from "jwt-decode";
 import Navbar from "./navbar";
 
+// need this to be linked to a stories template
+
 function AIPrompt() {
   const [words, setWords] = useState("");
   const [inputValue, setInputValue] = useState("");
@@ -66,7 +68,6 @@ function AIPrompt() {
 
   return (
     <>
-      <Navbar />
       <div className="flex flex-col min-h-screen max-w-7xl mx-auto text-xl flex-grow items-center justify-center">
         <p className="text-white-400 py-5">{words}</p>
         <form onSubmit={handleSubmit}>

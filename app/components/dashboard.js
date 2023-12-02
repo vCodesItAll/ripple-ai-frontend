@@ -42,7 +42,7 @@ function Dashboard() {
           </div>
           <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
             <img
-              src="app\components\images\Untitled_design.png"
+              src="https://cdn3.vectorstock.com/i/1000x1000/79/17/water-ripple-logo-design-template-vector-28617917.jpg"
               alt="mockup"
             />
           </div>
