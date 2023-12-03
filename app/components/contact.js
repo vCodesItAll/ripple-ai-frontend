@@ -5,7 +5,7 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <div>testingggggg</div>
+      <div>testing</div>
     </>
   );
 }
