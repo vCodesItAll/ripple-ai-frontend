@@ -18,7 +18,8 @@ function Card({ title, description, image }) {
             </h5>
           </a>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          The butterfly effect posits that small changes can have large, unpredictable consequences in complex systems.
+            The butterfly effect posits that small changes can have large,
+            unpredictable consequences in complex systems.
           </p>
           <a
             href="#"
@@ -58,7 +59,8 @@ function Card({ title, description, image }) {
             </h5>
           </a>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            A magical place where the far past meets the furthest future. A treasure awaits for only the smartest of people.
+            A magical place where the far past meets the furthest future. A
+            treasure awaits for only the smartest of people.
           </p>
           <a
             href="#"
@@ -98,7 +100,8 @@ function Card({ title, description, image }) {
             </h5>
           </a>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-             Is there an undiscovered fruit growing that causes laughter? As a determined horticulturist, it's up to you to find it.
+            Is there an undiscovered fruit growing that causes laughter? As a
+            determined horticulturist, it's up to you to find it.
           </p>
           <a
             href="#"
