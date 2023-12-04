@@ -3,7 +3,7 @@ import React from "react";
 function Card({ title, description, image }) {
   return (
     <div class="flex justify-center items-center h-screen mx-auto space-x-10">
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-700 dark:border-gray-700">
         <a href="#">
           <img
             class="rounded-t-lg"
@@ -44,7 +44,7 @@ function Card({ title, description, image }) {
           </a>
         </div>
       </div>
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-700 dark:border-gray-700">
         <a href="#">
           <img
             class="rounded-t-lg"
@@ -85,7 +85,7 @@ function Card({ title, description, image }) {
           </a>
         </div>
       </div>
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-700 dark:border-gray-700">
         <a href="#">
           <img
             class="rounded-t-lg"

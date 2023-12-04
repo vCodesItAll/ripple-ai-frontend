@@ -1,5 +1,4 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -12,24 +11,24 @@ const Navbar = () => {
     <nav className="bg-zinc-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <NavLink to="/dashboard" className="text-white text-5xl font-bold">
+        <Link href="/" className="text-white text-5xl font-bold">
           RiPPLE.<span style={{ color: "orange" }}>ai</span>
-        </NavLink>
+        </Link>
 
         {/* Navigation Links */}
         <div className="space-x-8">
-          <NavLink to="/stories" className="text-white hover:text-gray-300">
+          <Link href="/stories" className="text-white hover:text-gray-300">
             Stories
-          </NavLink>
-          <NavLink to="/submissions" className="text-white hover:text-gray-300">
+          </Link>
+          <Link href="/submissions" className="text-white hover:text-gray-300">
             Submissions
-          </NavLink>
-          <NavLink to="/contact" className="text-white hover:text-gray-300">
+          </Link>
+          <Link href="/contact" className="text-white hover:text-gray-300">
             Contact
-          </NavLink>
-          <NavLink to="/login" className="text-white hover:text-gray-300">
+          </Link>
+          <Link href="/login" className="text-white hover:text-gray-300">
             Login
-          </NavLink>
+          </Link>
         </div>
       </div>
     </nav>
