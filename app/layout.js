@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} h-screen flex flex-col justify-content-between`}>
         <GlobalStateProvider>{children}</GlobalStateProvider>
       </body>
     </html>

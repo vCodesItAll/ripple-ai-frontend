@@ -53,8 +53,3 @@ body {
   background-color: #FFA500; 
 }
 /* hunl */
-
-.card-container {
-  height: 600px;
-  overflow: hidden; /* Optional: If you want to hide content that exceeds the fixed height */
-}

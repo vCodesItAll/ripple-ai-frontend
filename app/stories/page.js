@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbar";
-import AIPrompt from "../components/ai-prompt";
+import AIPrompt from "../ai-prompt/page";
 import Card from "../components/card";
 
 function Stories() {

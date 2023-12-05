@@ -2,7 +2,8 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="bg-zinc-800 p-4 fixed top-0 w-full">
+    // <nav className="bg-zinc-800 p-4 fixed top-0 w-full">
+    <nav className="bg-zinc-800 p-4 fixed w-full">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-white text-5xl font-bold">
           RiPPLE.<span style={{ color: "orange" }}>ai</span>
