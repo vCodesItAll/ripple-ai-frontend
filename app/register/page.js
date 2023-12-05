@@ -50,7 +50,7 @@ function RegisterPage() {
 //------------------------------------------------------------------------------------------------------------------------------
   return (
     <div>
-      <div className=''>
+      <div className='text-black'>
         <h1>Register</h1>
       <div className="flex">
         <form className="mx-auto border-2 bg-mtgray" onSubmit={handleRegister}>

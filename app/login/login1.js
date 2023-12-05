@@ -6,6 +6,7 @@ import { useGlobalState } from '../../context/GlobalState';
 import AuthService from '../../services/auth.service';
 import { jwtDecode } from "jwt-decode";
 import Link from 'next/link';
+
 //------------------------------------------------------------------------------------------------------------------------------
 function LoginPage() {
     const router = useRouter();

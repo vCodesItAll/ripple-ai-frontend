@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navbar from "./navbar";
 import Link from "next/link";
 import Logo from "./logo";
 import Moon from "./moon";
 
 function Dashboard() {
+  const scrollDownRef = useRef(null);
+  const handleScrollDown = () => {
+    if (scrollDownRef.current) {
+      scrollDownRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -35,6 +42,32 @@ function Dashboard() {
             <Logo />
           </div>
         </div>
+        <div
+          ref={scrollDownRef}
+          style={{
+            position: "fixed",
+            bottom: "50px", // Adjust the position as needed
+            left: "900px", // Adjust the position as needed
+            cursor: "pointer",
+            fontSize: "30px",
+          }}
+          onClick={handleScrollDown}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="#FFA500"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </div>
       </section>
 
       <section className="bg-inherit">
@@ -44,14 +77,17 @@ function Dashboard() {
           </div>
           <div className="ml-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white text-right">
-              Immerse yourself into worlds unknown.
+              Immerse yourself into worlds{" "}
+              <span style={{ color: "orange" }}>un</span>known.
             </h1>
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 text-right">
-              You are the reader, the explorer and the creator of imagination. Discover the magic woven into the fabric of storytelling.
+              You are the reader, the explorer and the creator of imagination.
+              Discover the magic woven into the fabric of storytelling.
             </p>
           </div>
         </div>
       </section>
+      {/* <MouseTrail /> */}
     </>
   );
 }

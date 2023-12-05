@@ -1,7 +1,50 @@
-import React from "react";
+'use client'
 import Navbar from "../components/navbar";
+import { useRouter } from 'next/navigation';
+import React, { useState } from 'react'
+import { useGlobalState } from '../../context/GlobalState';
+import AuthService from '../../services/auth.service';
+import { jwtDecode } from "jwt-decode";
+import Link from 'next/link';
 
 function Login() {
+  const router = useRouter();
+  const { state, dispatch } = useGlobalState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  //------------------------------------------------------------------------------------------------------------------------------
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const username = email;
+    AuthService.login(username, password)
+      .then(async (resp) => {
+        if (resp != undefined) {
+          if (resp.access_token) {
+            //let data = jwtDecode(resp.access_token);
+            let data = jwtDecode(resp.access_token, { header: true });
+            await dispatch({
+              type: "SET_USER",
+              payload: data,
+            });
+            console.log("Login success");
+            router.push("/");
+          } else {
+            console.log("Login failed");
+            dispatch({ type: "LOGOUT_USER" });
+          }
+        }
+      })
+      .catch((error) => {
+        // Handle the error here
+        console.error("An error occurred:", error);
+        // Optionally, dispatch a logout or error action
+        dispatch({ type: "LOGOUT_USER" });
+      })
+      .finally(() => {
+        // Code to run regardless of success or failure
+        console.log("Login request completed");
+      });
+  };
   return (
     <>
       <Navbar />
@@ -18,7 +61,7 @@ function Login() {
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                 Sign in to your account
               </h1>
-              <form class="space-y-4 md:space-y-6" action="#">
+              <form class="space-y-4 md:space-y-6" action="#" onSubmit={handleLogin}>
                 <div>
                   <label
                     for="email"
@@ -31,8 +74,9 @@ function Login() {
                     name="email"
                     id="email"
                     class="bg--50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-zinc-600 dark:border-zinc-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-black-500"
-                    placeholder="name@company.com"
-                    required=""
+                    placeholder="name@email.com"
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </div>
                 <div>
@@ -48,7 +92,8 @@ function Login() {
                     id="password"
                     placeholder="••••••••"
                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    required=""
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
                   />
                 </div>
                 <div class="flex items-center justify-between">
