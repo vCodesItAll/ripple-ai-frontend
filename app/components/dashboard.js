@@ -3,6 +3,7 @@ import Navbar from "./navbar";
 import Link from "next/link";
 import Logo from "./logo";
 import Moon from "./moon";
+import Footer from "./footer";
 
 function Dashboard() {
   const scrollDownRef = useRef(null);
@@ -46,8 +47,8 @@ function Dashboard() {
           ref={scrollDownRef}
           style={{
             position: "fixed",
-            bottom: "50px", // Adjust the position as needed
-            left: "900px", // Adjust the position as needed
+            bottom: "50px", 
+            left: "950px", 
             cursor: "pointer",
             fontSize: "30px",
           }}
@@ -87,7 +88,7 @@ function Dashboard() {
           </div>
         </div>
       </section>
-      {/* <MouseTrail /> */}
+      <Footer />
     </>
   );
 }

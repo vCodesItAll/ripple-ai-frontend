@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
-import AIPrompt from "../ai-prompt/page";
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "./footer";
 
 function Card() {
   return (
-    <div className="flex justify-center items-center h-screen mx-auto space-x-10 mt-8">
+    <>
+    <div className="flex flex-col md:flex-row justify-center items-center h-screen mx-auto space-x-10 mt-10">
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-700 dark:border-gray-700">
         <a href="#">
           <img className="rounded-t-lg" src="/images/butterfly.png" alt="" />
@@ -34,10 +35,10 @@ function Card() {
         <a href="#">
           <Image
             className="rounded-t-lg"
-            src="/images/crystals.jpg"
+            src="/images/crystals1.jpg"
             alt="crystals"
-            height={400}
-            width={300}
+            height={382}
+            width={382}
           />
         </a>
         <div className="p-5">
@@ -76,7 +77,7 @@ function Card() {
 
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-700 dark:border-gray-700">
         <a href="#">
-          <img className="rounded-t-lg" src="/images/berry.jpg" alt="" />
+          <img className="rounded-t-lg" src="/images/berry1.jpg" alt="" />
         </a>
         <div className="p-5">
           <a href="#">
@@ -112,6 +113,8 @@ function Card() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/navbar";
-import AIPrompt from "../ai-prompt/page";
 import Card from "../components/card";
+
 
 function Stories() {
   return (
@@ -13,8 +13,3 @@ function Stories() {
 }
 
 export default Stories;
-
-// this needs to go into a story card
-{
-  /* <AIPrompt /> */
-}

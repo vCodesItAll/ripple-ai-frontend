@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 function Submissions() {
   return (
@@ -57,6 +58,7 @@ function Submissions() {
           </button>
         </form>
       </div>
+      <Footer />
     </>
   );
 }

@@ -1,11 +1,12 @@
-'use client'
+"use client";
 import Navbar from "../components/navbar";
-import { useRouter } from 'next/navigation';
-import React, { useState } from 'react'
-import { useGlobalState } from '../../context/GlobalState';
-import AuthService from '../../services/auth.service';
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
+import { useGlobalState } from "../../context/GlobalState";
+import AuthService from "../../services/auth.service";
 import { jwtDecode } from "jwt-decode";
-import Link from 'next/link';
+import Link from "next/link";
+import Footer from "../components/footer";
 
 function Login() {
   const router = useRouter();
@@ -50,18 +51,17 @@ function Login() {
       <Navbar />
       <section class="bg-black-50 dark:bg-black-900">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-          <a
-            href="#"
-            class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
-          >
-            RIPPLE.ai
-          </a>
+          
           <div class="w-full bg-black rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-zinc-800 dark:border-zinc-800">
             <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                 Sign in to your account
               </h1>
-              <form class="space-y-4 md:space-y-6" action="#" onSubmit={handleLogin}>
+              <form
+                class="space-y-4 md:space-y-6"
+                action="#"
+                onSubmit={handleLogin}
+              >
                 <div>
                   <label
                     for="email"
@@ -131,18 +131,19 @@ function Login() {
                 </button>
                 <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                   Don’t have an account yet?{" "}
-                  <a
-                    href="#"
+                  <Link
+                    href="/register"
                     class="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
                     Sign up
-                  </a>
+                  </Link>
                 </p>
               </form>
             </div>
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
