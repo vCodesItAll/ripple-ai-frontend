@@ -7,7 +7,7 @@ import Footer from "./footer";
 function Card() {
   return (
     <>
-    <div className="flex flex-col md:flex-row justify-center items-center h-screen mx-auto space-x-10 mt-10">
+    <div className="flex flex-col md:flex-row justify-center items-center mx-auto space-y-4 md:space-y-0 md:space-x-10 mt-32">
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-700 dark:border-gray-700">
         <a href="#">
           <img className="rounded-t-lg" src="/images/butterfly.png" alt="" />
