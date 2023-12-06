@@ -1,7 +1,13 @@
 import React from "react";
+import Navbar from "../components/navbar";
 
-function Privacy() {
-  return <div>testtttt</div>;
-}
+const PrivacyPolicy = () => {
+  return (
+    <>
+    <Navbar />
+    <div>test</div>
+    </>
+  )
+};
 
-export default Privacy;
+export default PrivacyPolicy;

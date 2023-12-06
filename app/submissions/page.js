@@ -4,9 +4,9 @@ import Footer from "../components/footer";
 
 function Submissions() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="flex justify-center items-center min-h-screen bg-black-50 dark:bg-black-50">
+      <div className="flex flex-grow justify-center items-center bg-black-50 dark:bg-black-50 mt-32">
         <form className="bg-white dark:bg-zinc-800 shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-md w-full">
           <div className="mb-4">
             <label
@@ -59,7 +59,7 @@ function Submissions() {
         </form>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

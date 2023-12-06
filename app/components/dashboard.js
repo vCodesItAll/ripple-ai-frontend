@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Navbar from "./navbar";
 import Link from "next/link";
-import Logo from "./logo";
+import Logo from "./ripple-logo";
 import Moon from "./moon";
 import Footer from "./footer";
 

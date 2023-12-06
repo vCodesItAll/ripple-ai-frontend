@@ -28,6 +28,7 @@ function Login() {
               payload: data,
             });
             console.log("Login success");
+            console.log(resp)
             router.push("/");
           } else {
             console.log("Login failed");

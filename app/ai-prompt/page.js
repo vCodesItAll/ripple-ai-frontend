@@ -29,11 +29,6 @@ function AIPrompt() {
     getUserFromLocalStorage();
   }, []);
 
-  const handleLogout = () => {
-    authService.logout();
-    dispatch({ type: "LOGOUT_USER" });
-    router.push("/");
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
