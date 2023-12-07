@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import { loadSlim } from "tsparticles-slim";
 
 const ParticlesContainer = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -74,7 +74,7 @@ const ParticlesContainer = () => {
                 default: "bounce",
               },
               random: false,
-              speed: 6,
+              speed: 4,
               straight: false,
             },
             number: {

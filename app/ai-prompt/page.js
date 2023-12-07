@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import authService from "../../services/auth.service";
 import { jwtDecode } from "jwt-decode";
 import Navbar from "../components/navbar";
-
+import Footer from "../components/footer";
 
 function AIPrompt() {
   const [words, setWords] = useState("");
@@ -28,7 +28,6 @@ function AIPrompt() {
     };
     getUserFromLocalStorage();
   }, []);
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -62,18 +61,26 @@ function AIPrompt() {
 
   return (
     <>
-    <Navbar />
-      <div className="flex flex-col min-h-screen max-w-7xl mx-auto text-xl flex-grow items-center justify-center">
-        <p className="text-white-400 py-5">{words}</p>
+      <Navbar />
+      <div className="relative flex flex-col min-h-fill max-w-7xl mx-auto text-xl flex-grow items-center justify-center">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="bg-gradient-to-br from-orange-500 to-black-300 rounded-full aspect-w-1 aspect-h-1 p-40 opacity-30">
+          {/* Additional styling for the gradient background */}
+        </div>
+      </div>
+      <div className="relative text-white-400 py-5 z-10">
+        <p>{words}</p>
         <form onSubmit={handleSubmit}>
           <input
-            className="bg-black border-none outline-none text-center"
+            className="bg-inherit border-none outline-none text-center"
             placeholder="Type here..."
             value={inputValue}
             onChange={handleChange}
           />
         </form>
       </div>
+    </div>
+      <Footer />
     </>
   );
 }
