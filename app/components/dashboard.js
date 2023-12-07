@@ -16,7 +16,7 @@ function Dashboard() {
 
   return (
     <>
-    <ParticlesContainer />
+      <ParticlesContainer />
       <Navbar />
       <section className="bg-inherit">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-screen items-center">
@@ -49,11 +49,11 @@ function Dashboard() {
           ref={scrollDownRef}
           style={{
             position: "fixed",
-            bottom: "50px", 
-            left: "950px", 
+            bottom: "50px",
             cursor: "pointer",
             fontSize: "30px",
           }}
+          className="w-screen flex justify-center animate-bounce"
           onClick={handleScrollDown}
         >
           <svg
@@ -86,6 +86,35 @@ function Dashboard() {
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 text-right">
               You are the reader, the explorer and the creator of imagination.
               Discover the magic woven into the fabric of storytelling.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-100 items-center">
+        <div className="mr-auto place-self-center lg:col-span-7">
+          <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white underline decoration-orange-400">
+            Choose A Story
+          </h1>
+          <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            With multiple options - and many more to come, our library doesn't
+            disappoint! Dive into stories like "The Butterfly Effect", where
+            slight changes to the past, dramatically alter the fate of the
+            future.
+          </p>
+        </div>
+      </div>
+      <section className="bg-inherit">
+        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-100 items-center">
+          <div className="lg:col-span-5 lg:flex"></div>
+          <div className="ml-auto place-self-center lg:col-span-7">
+            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white text-right underline decoration-orange-400">
+              Or Give Us A Prompt
+            </h1>
+            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 text-right">
+              Have a story in mind? We want to hear it! Stop by the Submissions
+              tab to drop a prompt for future stories. After all, the
+              possibilities are endless.
             </p>
           </div>
         </div>

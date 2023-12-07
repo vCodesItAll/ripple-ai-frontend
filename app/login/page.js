@@ -7,6 +7,7 @@ import AuthService from "../../services/auth.service";
 import { jwtDecode } from "jwt-decode";
 import Link from "next/link";
 import Footer from "../components/footer";
+import ParticlesContainer from "../components/particles";
 
 function Login() {
   const router = useRouter();
@@ -49,6 +50,7 @@ function Login() {
   };
   return (
     <>
+    <ParticlesContainer />
       <Navbar />
       <section class="bg-black-50 dark:bg-black-900 mt-20">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">

@@ -55,7 +55,7 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <nav className="bg-zinc-800 p-4 fixed w-full">
+    <nav className="bg-zinc-800 p-4 fixed w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-white text-5xl font-bold">
           RiPPLE.<span style={{ color: "orange" }}>ai</span>

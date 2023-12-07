@@ -32,8 +32,8 @@ function AIPrompt() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(inputValue);
-    const data = await axios
-      .post(
+    try {
+      const response = await axios.post(
         "https://8000-tresphill-rippleai2-gwyip31yybf.ws-us106.gitpod.io/api/v1/openai_endpoints/stream?human_input_str=" +
           inputValue,
         {
@@ -42,17 +42,16 @@ function AIPrompt() {
         {
           "Content-Type": "application/x-www-form-urlencoded",
         }
-      )
-      .then((response) => {
-        console.log(response.data);
-        setWords(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      );
 
-    // clears the input field
-    setInputValue("");
+      console.log(response.data);
+      // Concatenate the new response with the existing text
+      setWords((prevWords) => prevWords + "\n" + response.data);
+      // Clears the input field
+      setInputValue("");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleChange = (event) => {
@@ -62,24 +61,22 @@ function AIPrompt() {
   return (
     <>
       <Navbar />
-      <div className="relative flex flex-col min-h-fill max-w-7xl mx-auto text-xl flex-grow items-center justify-center">
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="bg-gradient-to-br from-orange-500 to-black-300 rounded-full aspect-w-1 aspect-h-1 p-40 opacity-30">
-          {/* Additional styling for the gradient background */}
+      <div className="relative flex flex-col min-h-screen max-w-7xl mx-auto text-xl flex-grow items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="bg-gradient-to-br from-orange-400 to-transparent rounded-full aspect-w-1 aspect-h-1 p-40 opacity-50 blur-md"></div>
+        </div>
+        <div className="relative text-white-400 p-10 z-10 text-center">
+          <p>{words}</p>
+          <form onSubmit={handleSubmit}>
+            <input
+              className="bg-inherit border-none outline-none text-center text-slate-400"
+              placeholder="Type here..."
+              value={inputValue}
+              onChange={handleChange}
+            />
+          </form>
         </div>
       </div>
-      <div className="relative text-white-400 py-5 z-10">
-        <p>{words}</p>
-        <form onSubmit={handleSubmit}>
-          <input
-            className="bg-inherit border-none outline-none text-center"
-            placeholder="Type here..."
-            value={inputValue}
-            onChange={handleChange}
-          />
-        </form>
-      </div>
-    </div>
       <Footer />
     </>
   );
