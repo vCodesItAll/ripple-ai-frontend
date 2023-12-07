@@ -5,7 +5,7 @@ function Moon() {
   return (
     <div>
       <Image
-        src="/images/moon.jpg"
+        src="/images/moon2.png"
         alt="moon image"
         height={1000}
         width={1000}

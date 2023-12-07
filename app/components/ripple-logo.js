@@ -5,7 +5,7 @@ function Logo() {
   return (
     <div>
       <Image
-        src="/images/ripple2.png"
+        src="/images/ripple3.png"
         alt="ripple image"
         height={400}
         width={600}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Logo from "./ripple-logo";
 import Moon from "./moon";
 import Footer from "./footer";
+import ParticlesContainer from "./particles";
 
 function Dashboard() {
   const scrollDownRef = useRef(null);
@@ -15,6 +16,7 @@ function Dashboard() {
 
   return (
     <>
+    <ParticlesContainer />
       <Navbar />
       <section className="bg-inherit">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-screen items-center">
