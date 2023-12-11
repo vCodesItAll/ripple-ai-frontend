@@ -66,11 +66,11 @@ function AIPrompt() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="bg-gradient-to-br from-orange-400 to-transparent rounded-full aspect-w-1 aspect-h-1 p-40 opacity-50 blur-md"></div>
         </div>
-        <div className="relative text-white-400 py-5 z-10">
+        <div className="relative text-white-400 py-5 z-10 justify-center text-center">
           <p>{words}</p>
           <form onSubmit={handleSubmit}>
             <input
-              className="bg-inherit border-none outline-none text-center"
+              className="bg-inherit border-none outline-none text-center justify-center"
               placeholder="Type here..."
               value={inputValue}
               onChange={handleChange}
