@@ -39,6 +39,7 @@ client.interceptors.response.use(
 
               localStorage.setItem('user', response.data);
 
+
               client.defaults.headers['Authorization'] = "Bearer " + response.data.access;
               originalRequest.headers['Authorization'] = "Bearer " + response.data.access;
 

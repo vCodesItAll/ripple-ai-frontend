@@ -11,8 +11,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 03, 03, 03;
+    --background-end-rgb: 03, 03, 03;
   }
 }
 
@@ -24,4 +24,44 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.space-x-8 {
+  display: flex;
+  gap: 8px; /* Adjust the gap between links as needed */
+}
+
+/* hover under nav links */
+.space-x-8 a {
+  text-decoration: none; 
+  position: relative;
+  color: white;
+}
+
+.space-x-8 a:hover {
+  color: #ccc; 
+}
+
+.space-x-8 a:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; 
+  background-color: #FFA500; 
+}
+/* hunl */
+
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* so that it stays on top of all other elements */
 }
