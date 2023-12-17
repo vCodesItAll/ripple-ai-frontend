@@ -36,7 +36,7 @@ function Dashboard() {
             </Link>
             <Link
               href="/submissions"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 rounded-lg hover:bg-amber-500 focus:ring-4 focus:ring-gray-100 dark:text-white dark:hover:bg-amber-500 dark:focus:ring-gray-800 border border:amber-500 dark:border-orange-400"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 rounded-lg hover:bg-amber-500 focus:ring-4 focus:ring-gray-100 dark:text-white dark:hover:bg-amber-500 dark:focus:ring-gray-800 border border:amber-500 dark:border-amber-500"
             >
               Suggest A Story
             </Link>
