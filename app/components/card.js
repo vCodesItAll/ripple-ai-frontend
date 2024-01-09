@@ -3,8 +3,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "./footer";
-import butterfly from "../images/butterfly.png";
 import crystals from "../images/crystals1.jpg";
+import butterfly from "../images/butterfly.png";
 import berry from "../images/berry1.jpg";
 
 function Card() {
@@ -95,7 +95,7 @@ function Card() {
 
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-700 dark:border-gray-700">
           <a href="#">
-            <Image className="rounded-t-lg" src={berry} alt="berry" />
+            <Image className="rounded-t-lg" src={berry} alt="berry"  />
           </a>
           <div className="p-5">
             <a href="#">
