@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Footer from "./footer";
 import crystals from "../images/crystals1.jpg";
-import butterfly from "../images/butterflySketch.png";
+import flyingCata from "../images/butterflySketch.png";
 import berry from "../images/berry1.jpg";
 
 function Card() {
@@ -13,7 +13,7 @@ function Card() {
       <div className="flex flex-col md:flex-row justify-center items-center mx-auto space-y-4 md:space-y-0 md:space-x-10 mt-32">
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-700 dark:border-gray-700">
           <a href="#">
-            <Image className="rounded-t-lg" src={butterfly} alt="butterfly" />
+            <Image className="rounded-t-lg" src={flyingCata} alt="butterfly" />
           </a>
           <div className="p-5">
             <a href="#">
