@@ -102,7 +102,7 @@ function Card() {
           </a>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
             Is there an undiscovered fruit growing that causes laughter? As a
-            determined horticulturist, it's up to you to find it.
+            determined horticulturist, it&apos;s up to you to find it.
           </p>
           <a
             href="#"

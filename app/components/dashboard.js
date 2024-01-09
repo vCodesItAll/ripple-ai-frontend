@@ -97,10 +97,10 @@ function Dashboard() {
             Choose A Story
           </h1>
           <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-            With multiple options - and many more to come, our library doesn't
-            disappoint! Dive into stories like "The Butterfly Effect", where
-            slight changes to the past, dramatically alter the fate of the
-            future.
+            With multiple options - and many more to come, our library
+            doesn&apos;t disappoint! Dive into stories like &quot;The Butterfly
+            Effect&quot;, where slight changes to the past, dramatically alter
+            the fate of the future.
           </p>
         </div>
       </div>

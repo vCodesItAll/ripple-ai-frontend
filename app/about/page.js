@@ -42,7 +42,7 @@ function About() {
               At RiPPLE.ai, we believe in the power of storytelling to connect,
               inspire, and entertain. Our platform goes beyond traditional
               storytelling, offering a dynamic and interactive experience for
-              both creators and consumers of stories. Whether you're a seasoned
+              both creators and consumers of stories. Whether you&apos;re a seasoned
               storyteller or someone who simply loves to get lost in a good
               tale, RiPPLE.ai is your portal to a world of endless
               possibilities.
