@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import lilMoon from "../images/moon.png";
+import lilMoon from "../images/moon2.png";
 
 function Moon() {
   return (
