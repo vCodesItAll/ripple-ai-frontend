@@ -3,9 +3,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "./footer";
-import crystals from "./images/crystals1.jpg";
-import butterfly from "./images/butterfly.png";
-import berry from "./images/berry1.jpg";
+import crystals from "../images/crystals1.jpg";
+import butterfly from "../images/butterflySketch.png";
+import berry from "../images/berry1.jpg";
 
 function Card() {
   return (
