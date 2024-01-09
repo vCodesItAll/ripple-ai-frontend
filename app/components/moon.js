@@ -1,15 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import lilMoon from "../images/moon2.png";
 
 function Moon() {
   return (
     <div>
-      <Image
-        src="/images/moon2.png"
-        alt="moon image"
-        height={1000}
-        width={1000}
-      />
+      <Image src={lilMoon} alt="moon image" height={1000} width={1000} />
     </div>
   );
 }
