@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
-const ParticlesContainer = () => {
+const ZoomedParticlesContainer = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
@@ -62,10 +62,10 @@ const ParticlesContainer = () => {
             },
             links: {
               color: "#ffffff",
-              distance: 150,
+              distance: 200, // Original was 150
               enable: true,
               opacity: 0.5,
-              width: 1,
+              width: 3, // Original was 1
             },
             move: {
               direction: "none",
@@ -74,7 +74,7 @@ const ParticlesContainer = () => {
                 default: "bounce",
               },
               random: false,
-              speed: 4,
+              speed: 3.5, // Original was 4
               straight: false,
             },
             number: {
@@ -82,7 +82,7 @@ const ParticlesContainer = () => {
                 enable: true,
                 area: 800,
               },
-              value: 80,
+              value: 40, // Original was 80
             },
             opacity: {
               value: 0.5,
@@ -91,7 +91,7 @@ const ParticlesContainer = () => {
               type: "circle",
             },
             size: {
-              value: { min: 1, max: 5 },
+              value: { min: 2, max: 10 }, // Original min was 1 and max was 5
             },
           },
           detectRetina: true,
@@ -101,4 +101,4 @@ const ParticlesContainer = () => {
   );
 };
 
-export default ParticlesContainer;
+export default ZoomedParticlesContainer;

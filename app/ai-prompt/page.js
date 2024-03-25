@@ -7,6 +7,8 @@ import authService from "../../services/auth.service";
 import { jwtDecode } from "jwt-decode";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import ParticlesContainer from "../components/particles";
+import ZoomedParticlesContainer from "../components/zoomed-particles";
 
 function AIPrompt() {
   const [words, setWords] = useState("");
@@ -61,6 +63,7 @@ function AIPrompt() {
 
   return (
     <>
+      <ZoomedParticlesContainer />
       <Navbar />
       <div className="relative flex flex-col min-h-screen max-w-7xl mx-auto text-xl flex-grow items-center justify-center">
         <div className="absolute inset-0 flex items-center justify-center">
